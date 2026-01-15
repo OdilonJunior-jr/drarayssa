@@ -5,22 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Dra. Rayssa Muniz | Dentista em Uberaba</title>
-    <meta name="description" content="Consultório Odontológico Dra. Rayssa Muniz. Implantes, Próteses e Estética Dental com atendimento humanizado em Uberaba, MG.">
+    <meta name="description" content="Consultório Odontológico Dra. Rayssa Muniz. Especialista em Implantes, Próteses e Estética Dental. Atendimento humanizado em Uberaba, MG.">
     <meta name="robots" content="index, follow">
+    <meta name="author" content="GRIDX">
     
     <meta property="og:type" content="website">
     <meta property="og:title" content="Dra. Rayssa Muniz | Odontologia Premium">
-    <meta property="og:description" content="Agende sua avaliação. Implantes e Estética Dental.">
-    <meta property="og:image" content="rayssa2.jpg">
-    
+    <meta property="og:description" content="Recupere sua autoestima e seu sorriso. Agende sua avaliação.">
+    <meta property="og:image" content="rayssa2.jpg"> <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dentist",
+      "name": "Dra. Rayssa Muniz",
+      "image": "rayssa2.jpg",
+      "telephone": "+5534997940846",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Américo Pessato, 1043",
+        "addressLocality": "Uberaba",
+        "addressRegion": "MG",
+        "addressCountry": "BR"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      "priceRange": "$$"
+    }
+    </script>
+
     <link rel="icon" type="image/png" href="rayssa-logo.png">
 
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
     <style>
-        /* --- ESTILOS (Mantidos idênticos ao aprovado) --- */
         :root {
+            /* Identidade Visual */
             --brand-wine: #781C26;
             --brand-gold: #C6A87C;
             --brand-bg: #F9F9F9;
@@ -32,83 +55,166 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         html { scroll-behavior: smooth; }
-        body { background-color: #E0E0E0; font-family: 'Manrope', sans-serif; color: var(--text-main); min-height: 100vh; }
 
-        .main-wrapper { width: 100%; min-height: 100vh; display: flex; justify-content: center; }
+        body {
+            background-color: #E0E0E0;
+            font-family: 'Manrope', sans-serif;
+            color: var(--text-main);
+            min-height: 100vh;
+        }
 
-        /* Desktop Brand */
+        /* --- LAYOUT SPLIT SCREEN (Tela Dividida) --- */
+        .main-wrapper {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Lado Esquerdo (Branding - Só Desktop) */
         .desktop-brand {
-            display: none; width: 50%; height: 100vh;
+            display: none; /* Oculto no celular */
+            width: 50%;
+            height: 100vh;
             background: linear-gradient(135deg, var(--brand-wine) 0%, #500e15 100%);
-            position: sticky; top: 0;
-            align-items: center; justify-content: center; flex-direction: column;
-            color: var(--white); padding: 40px; overflow: hidden;
+            position: sticky;
+            top: 0;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: var(--white);
+            padding: 40px;
+            overflow: hidden;
         }
+
         .desktop-brand::before {
-            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-            background-image: url('rayssa.jpg'); background-size: cover; background-position: center top;
-            opacity: 0.15; filter: grayscale(100%) contrast(1.2);
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            /* FOTO DO BLAZER (Fundo Desktop) */
+            background-image: url('rayssa.jpg'); 
+            background-size: cover;
+            background-position: center top;
+            opacity: 0.15;
+            filter: grayscale(100%) contrast(1.2);
         }
-        .desktop-logo-container { position: relative; z-index: 2; text-align: center; animation: fadeIn 1.2s ease-out; }
-        .desktop-logo { width: 320px; filter: brightness(0) invert(1); drop-shadow: 0 4px 10px rgba(0,0,0,0.3); }
 
-        /* Mobile Hub */
+        .desktop-logo-container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        .desktop-logo {
+            width: 320px;
+            filter: brightness(0) invert(1);
+            drop-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            margin-bottom: 0; /* Sem texto abaixo */
+        }
+
+        /* Lado Direito (Conteúdo - Mobile Hub) */
         .mobile-hub {
-            width: 100%; max-width: 450px; background-color: var(--brand-bg);
-            min-height: 100vh; position: relative;
-            box-shadow: 0 0 50px rgba(0,0,0,0.15); padding-bottom: 90px;
+            width: 100%;
+            max-width: 450px;
+            background-color: var(--brand-bg);
+            min-height: 100vh;
+            position: relative;
+            box-shadow: 0 0 50px rgba(0,0,0,0.15);
+            padding-bottom: 90px; /* Espaço para o botão flutuante */
         }
 
+        /* --- MEDIA QUERY: COMPUTADOR (Acima de 1024px) --- */
         @media (min-width: 1024px) {
-            body { background-color: #1a1a1a; overflow: hidden; }
+            body {
+                background-color: #1a1a1a;
+                overflow: hidden; /* Remove rolagem dupla */
+            }
+
             .main-wrapper { justify-content: flex-start; }
             .desktop-brand { display: flex; width: 50%; }
+
             .mobile-hub {
-                width: 50%; max-width: none; height: 100vh; overflow-y: auto;
+                width: 50%;
+                max-width: none;
+                height: 100vh;
+                overflow-y: auto;
                 box-shadow: -10px 0 30px rgba(0,0,0,0.2);
             }
+
+            /* Scrollbar Personalizada */
             .mobile-hub::-webkit-scrollbar { width: 8px; }
             .mobile-hub::-webkit-scrollbar-track { background: #f1f1f1; }
             .mobile-hub::-webkit-scrollbar-thumb { background: var(--brand-gold); border-radius: 4px; }
             .mobile-hub::-webkit-scrollbar-thumb:hover { background: var(--brand-wine); }
+            
             .hub-content-limiter { max-width: 600px; margin: 0 auto; }
         }
 
-        /* Componentes */
-        .header { background: linear-gradient(180deg, var(--brand-wine) 0%, #500e15 100%); padding: 35px 20px 80px; text-align: center; border-bottom-left-radius: 40px; border-bottom-right-radius: 40px; }
+        /* --- COMPONENTES VISUAIS --- */
+        
+        /* HEADER */
+        .header {
+            background: linear-gradient(180deg, var(--brand-wine) 0%, #500e15 100%);
+            padding: 35px 20px 80px;
+            text-align: center;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+        }
+
         .logo-img { width: 140px; filter: brightness(0) invert(1); margin-bottom: 8px; }
         .header h1 { color: var(--white); font-family: 'Playfair Display', serif; font-size: 1.5rem; letter-spacing: 0.5px; margin-top: 5px; }
         .header-cro { color: var(--brand-gold); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; display: inline-block; border: 1px solid rgba(198, 168, 124, 0.3); padding: 4px 12px; border-radius: 20px; margin-top: 5px; }
 
+        /* HERO FOTO (MOBILE) */
         .hero-wrapper { margin-top: -60px; padding: 0 30px; position: relative; z-index: 2; }
-        .hero-img { width: 100%; height: 250px; object-fit: cover; object-position: center 20%; border-radius: 25px; border: 4px solid var(--white); box-shadow: var(--shadow-soft); }
+        
+        .hero-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            /* Ajuste para focar no rosto (Jaleco Rosa) */
+            object-position: center 20%; 
+            border-radius: 25px;
+            border: 4px solid var(--white);
+            box-shadow: var(--shadow-soft);
+        }
 
+        /* SEÇÕES */
         .section { padding: 30px 25px 10px; }
         .section-header { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
         .section-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--brand-wine); white-space: nowrap; font-weight: 700; }
         .line { width: 100%; height: 1px; background: var(--brand-gold); opacity: 0.4; }
 
+        /* GRID */
         .features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
         @media (min-width: 1024px) { .features-grid { grid-template-columns: repeat(4, 1fr); gap: 15px; } }
 
-        .feature-card { background: var(--white); padding: 18px 15px; border-radius: 16px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.02); border: 1px solid transparent; transition: all 0.3s; }
+        .feature-card {
+            background: var(--white); padding: 18px 15px; border-radius: 16px; text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02); border: 1px solid transparent; transition: all 0.3s;
+        }
         .feature-card:hover { border-color: var(--brand-gold); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.05); }
         .f-icon { font-size: 1.4rem; color: var(--brand-wine); margin-bottom: 10px; background: rgba(120, 28, 38, 0.05); width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; margin-left: auto; margin-right: auto; }
         .feature-card h3 { font-size: 0.85rem; margin-bottom: 4px; color: var(--text-main); font-weight: 700; }
         .feature-card p { font-size: 0.7rem; color: var(--text-light); line-height: 1.3; }
 
+        /* SERVIÇOS */
         .services-container { background: var(--white); padding: 10px 25px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.03); }
         .service-item { display: flex; align-items: flex-start; gap: 18px; padding: 20px 0; border-bottom: 1px solid #f0f0f0; transition: transform 0.2s; }
         .service-item:last-child { border-bottom: none; }
         .service-item:hover { transform: translateX(5px); }
+        
         .s-icon { color: var(--brand-wine); font-size: 1.3rem; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; background: rgba(198, 168, 124, 0.15); border-radius: 8px; flex-shrink: 0; }
         .s-content h4 { font-size: 1rem; color: var(--brand-wine); margin-bottom: 4px; font-weight: 700; }
         .s-content p { font-size: 0.85rem; color: var(--text-light); line-height: 1.4; }
 
+        /* BIO */
         .bio-block { background: var(--white); padding: 25px; border-radius: 20px; border-left: 4px solid var(--brand-gold); margin-top: 5px; box-shadow: 0 5px 20px rgba(0,0,0,0.03); }
         .bio-text { font-size: 0.95rem; line-height: 1.7; text-align: justify; color: #555; }
         .quote { display: block; text-align: center; margin-top: 15px; font-family: 'Playfair Display', serif; font-style: italic; color: var(--brand-gold); font-weight: 600; font-size: 1.1rem; }
 
+        /* BOTÃO MAPA */
         .actions-wrapper { padding: 20px 25px 40px; }
         .btn-main { display: flex; align-items: center; justify-content: space-between; width: 100%; background: var(--brand-wine); color: var(--white); text-decoration: none; padding: 18px 25px; border-radius: 16px; margin-bottom: 15px; transition: all 0.2s; }
         .btn-outline { background: transparent; border: 2px solid var(--brand-wine); color: var(--brand-wine); }
@@ -117,13 +223,24 @@
         .btn-info span { font-size: 0.8rem; opacity: 0.8; }
         .btn-icon { font-size: 1.6rem; }
         
-        footer { text-align: center; opacity: 0.6; font-size: 0.75rem; padding-bottom: 30px; }
+        /* FOOTER */
+        footer { text-align: center; opacity: 0.6; font-size: 0.75rem; padding-bottom: 30px; display: flex; flex-direction: column; align-items: center; gap: 5px; }
         
-        /* Botão Flutuante */
-        .floating-btn { position: fixed; bottom: 25px; right: 25px; padding: 14px 24px; background-color: var(--brand-wine); color: white; border-radius: 50px; display: flex; align-items: center; gap: 12px; box-shadow: 0 5px 20px rgba(120, 28, 38, 0.4); z-index: 9999; text-decoration: none; animation: pulse-shadow 2s infinite; transition: transform 0.2s; }
+        .dev-link { color: inherit; text-decoration: none; font-weight: 700; transition: all 0.2s; border-bottom: 1px dotted transparent; }
+        .dev-link:hover { color: var(--brand-wine); border-bottom: 1px dotted var(--brand-wine); opacity: 1; }
+
+        /* BOTÃO FLUTUANTE (Pílula) */
+        .floating-btn {
+            position: fixed; bottom: 25px; right: 25px; padding: 14px 24px;
+            background-color: var(--brand-wine); color: white; border-radius: 50px;
+            display: flex; align-items: center; gap: 12px;
+            box-shadow: 0 5px 20px rgba(120, 28, 38, 0.4); z-index: 9999;
+            text-decoration: none; animation: pulse-shadow 2s infinite; transition: transform 0.2s;
+        }
         .floating-btn:hover { transform: scale(1.05); }
         .floating-btn span { font-size: 0.95rem; font-weight: 700; white-space: nowrap; letter-spacing: 0.3px; }
         .floating-btn i { font-size: 1.4rem; }
+
         @keyframes pulse-shadow { 0% { box-shadow: 0 0 0 0 rgba(120, 28, 38, 0.5); } 70% { box-shadow: 0 0 0 15px rgba(120, 28, 38, 0); } 100% { box-shadow: 0 0 0 0 rgba(120, 28, 38, 0); } }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
@@ -140,7 +257,9 @@
     </div>
 
     <div class="mobile-hub">
+        
         <div class="hub-content-limiter">
+
             <header class="header">
                 <img src="rayssa-logo.png" alt="Logo" class="logo-img">
                 <h1>Dra. Rayssa Muniz</h1>
@@ -148,7 +267,7 @@
             </header>
 
             <div class="hero-wrapper">
-                <img src="rayssa2.jpg" alt="Dra Rayssa Muniz" class="hero-img">
+                <img src="rayssa2.jpg" alt="Dra Rayssa Muniz no Consultório" class="hero-img">
             </div>
 
             <section class="section">
@@ -156,11 +275,24 @@
                     <h2 class="section-title">Nosso Espaço</h2>
                     <div class="line"></div>
                 </div>
+
                 <div class="features-grid">
-                    <div class="feature-card"><div class="f-icon"><i class="fas fa-shield-virus"></i></div><h3>Biossegurança</h3><p>Esterilização hospitalar.</p></div>
-                    <div class="feature-card"><div class="f-icon"><i class="fas fa-couch"></i></div><h3>Conforto</h3><p>Ambiente climatizado.</p></div>
-                    <div class="feature-card"><div class="f-icon"><i class="fas fa-wifi"></i></div><h3>Tecnologia</h3><p>Equipamentos de ponta.</p></div>
-                    <div class="feature-card"><div class="f-icon"><i class="fas fa-clock"></i></div><h3>Sem Pressa</h3><p>Atendimento exclusivo.</p></div>
+                    <div class="feature-card">
+                        <div class="f-icon"><i class="fas fa-shield-virus"></i></div>
+                        <h3>Biossegurança</h3><p>Esterilização hospitalar.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="f-icon"><i class="fas fa-couch"></i></div>
+                        <h3>Conforto</h3><p>Ambiente climatizado.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="f-icon"><i class="fas fa-wifi"></i></div>
+                        <h3>Tecnologia</h3><p>Equipamentos de ponta.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="f-icon"><i class="fas fa-clock"></i></div>
+                        <h3>Sem Pressa</h3><p>Atendimento exclusivo.</p>
+                    </div>
                 </div>
             </section>
 
@@ -169,10 +301,29 @@
                     <h2 class="section-title">Tratamentos</h2>
                     <div class="line"></div>
                 </div>
+
                 <div class="services-container">
-                    <div class="service-item"><div class="s-icon"><i class="fas fa-gem"></i></div><div class="s-content"><h4>Implantes Dentários</h4><p>Recupere a segurança de sorrir com materiais de alta durabilidade.</p></div></div>
-                    <div class="service-item"><div class="s-icon"><i class="fas fa-shapes"></i></div><div class="s-content"><h4>Próteses</h4><p>Reabilitação oral estética e funcional com adaptação perfeita.</p></div></div>
-                    <div class="service-item"><div class="s-icon"><i class="fas fa-magic"></i></div><div class="s-content"><h4>Estética & Geral</h4><p>Clareamento, restaurações e cuidados preventivos.</p></div></div>
+                    <div class="service-item">
+                        <div class="s-icon"><i class="fas fa-gem"></i></div> 
+                        <div class="s-content">
+                            <h4>Implantes Dentários</h4>
+                            <p>Recupere a segurança de sorrir com materiais de alta durabilidade.</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="s-icon"><i class="fas fa-shapes"></i></div>
+                        <div class="s-content">
+                            <h4>Próteses</h4>
+                            <p>Reabilitação oral estética e funcional com adaptação perfeita.</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="s-icon"><i class="fas fa-magic"></i></div>
+                        <div class="s-content">
+                            <h4>Estética & Geral</h4>
+                            <p>Clareamento, restaurações e cuidados preventivos.</p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -181,30 +332,42 @@
                     <h2 class="section-title">A Profissional</h2>
                     <div class="line"></div>
                 </div>
+
                 <div class="bio-block">
-                    <p class="bio-text">Olá! Sou a <strong>Dra. Rayssa Muniz</strong>. Formada pela UNIUBE em 2017, realizei meu sonho de abrir este consultório em 2022. Minha missão é aliar a técnica odontológica de ponta com um atendimento verdadeiramente humanizado, focado na sua autoestima.</p>
+                    <p class="bio-text">
+                        Olá! Sou a <strong>Dra. Rayssa Muniz</strong>. Formada pela UNIUBE em 2017, realizei meu sonho de abrir este consultório em 2022. Minha missão é aliar a técnica odontológica de ponta com um atendimento verdadeiramente humanizado, focado na sua autoestima.
+                    </p>
                     <span class="quote">"Nunca foi sorte, sempre foi Deus."</span>
                 </div>
             </section>
 
             <div class="actions-wrapper">
                 <a href="https://www.google.com/maps/search/?api=1&query=Av.+Américo+Pessato,+1043+-+Uberaba+MG" target="_blank" rel="noopener noreferrer" class="btn-main btn-outline">
-                    <div class="btn-info"><h3>Localização</h3><span>Av. Américo Pessato, 1043</span></div>
+                    <div class="btn-info">
+                        <h3>Localização</h3>
+                        <span>Av. Américo Pessato, 1043</span>
+                    </div>
                     <i class="fas fa-map-marker-alt btn-icon"></i>
                 </a>
             </div>
 
             <footer>
-                <img src="rayssa-logo.png" style="width: 25px; filter: grayscale(1); opacity: 0.5;">
-                <p>Desenvolvido por GRIDX © 2026</p>
+                <img src="rayssa-logo.png" style="width: 25px; filter: grayscale(1); opacity: 0.5; margin-bottom: 0;">
+                <p>
+                    Desenvolvido por 
+                    <a href="https://gridx.com.br/" target="_blank" class="dev-link">GRIDX</a> 
+                    © 2026
+                </p>
             </footer>
         </div>
     </div>
 
     <a href="https://wa.me/5534997940846?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="floating-btn">
-        <i class="fab fa-whatsapp"></i><span>Agendar Consulta</span>
+        <i class="fab fa-whatsapp"></i>
+        <span>Agendar Consulta</span>
     </a>
 
 </div>
+
 </body>
 </html>
