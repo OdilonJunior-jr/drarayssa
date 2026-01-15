@@ -4,59 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Dra. Rayssa Muniz | Dentista em Uberaba | Implantes e Estética</title>
-    <meta name="description" content="Consultório Odontológico Dra. Rayssa Muniz. Especialista em Implantes, Próteses e Estética Dental. Atendimento humanizado em Uberaba, MG. Agende sua avaliação.">
-    <meta name="keywords" content="dentista uberaba, implantes dentários, prótese dentária, estética dental, dra rayssa muniz, clareamento dental">
+    <title>Dra. Rayssa Muniz | Dentista em Uberaba</title>
+    <meta name="description" content="Consultório Odontológico Dra. Rayssa Muniz. Implantes, Próteses e Estética Dental com atendimento humanizado em Uberaba, MG.">
     <meta name="robots" content="index, follow">
-    <meta name="author" content="GRIDX">
     
     <meta property="og:type" content="website">
     <meta property="og:title" content="Dra. Rayssa Muniz | Odontologia Premium">
-    <meta property="og:description" content="Recupere sua autoestima e seu sorriso. Implantes, Próteses e Estética com atendimento humanizado.">
-    <meta property="og:image" content="rayssa2.jpg"> <meta property="og:url" content="https://seusite.com.br"> <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Dentist",
-      "name": "Dra. Rayssa Muniz",
-      "image": "rayssa2.jpg",
-      "@id": "https://seusite.com.br",
-      "url": "https://seusite.com.br",
-      "telephone": "+5534997940846",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Av. Américo Pessato, 1043",
-        "addressLocality": "Uberaba",
-        "addressRegion": "MG",
-        "addressCountry": "BR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "", 
-        "longitude": "" 
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
-        ],
-        "opens": "08:00",
-        "closes": "18:00"
-      },
-      "priceRange": "$$"
-    }
-    </script>
-
+    <meta property="og:description" content="Agende sua avaliação. Implantes e Estética Dental.">
+    <meta property="og:image" content="rayssa2.jpg">
+    
     <link rel="icon" type="image/png" href="rayssa-logo.png">
 
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
     <style>
-        /* MANTIDO O MESMO CSS DO DESIGN APROVADO */
+        /* --- ESTILOS (Mantidos idênticos ao aprovado) --- */
         :root {
             --brand-wine: #781C26;
             --brand-gold: #C6A87C;
@@ -69,56 +32,31 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         html { scroll-behavior: smooth; }
+        body { background-color: #E0E0E0; font-family: 'Manrope', sans-serif; color: var(--text-main); min-height: 100vh; }
 
-        body {
-            background-color: #E0E0E0;
-            font-family: 'Manrope', sans-serif;
-            color: var(--text-main);
-            min-height: 100vh;
-        }
-
-        /* Layout Split Screen */
         .main-wrapper { width: 100%; min-height: 100vh; display: flex; justify-content: center; }
 
-        /* Desktop Brand (Esquerda) */
+        /* Desktop Brand */
         .desktop-brand {
-            display: none;
-            width: 50%;
-            height: 100vh;
+            display: none; width: 50%; height: 100vh;
             background: linear-gradient(135deg, var(--brand-wine) 0%, #500e15 100%);
-            position: sticky;
-            top: 0;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            color: var(--white);
-            padding: 40px;
-            overflow: hidden;
+            position: sticky; top: 0;
+            align-items: center; justify-content: center; flex-direction: column;
+            color: var(--white); padding: 40px; overflow: hidden;
         }
-
         .desktop-brand::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background-image: url('rayssa.jpg'); 
-            background-size: cover;
-            background-position: center top;
-            opacity: 0.15;
-            filter: grayscale(100%) contrast(1.2);
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('rayssa.jpg'); background-size: cover; background-position: center top;
+            opacity: 0.15; filter: grayscale(100%) contrast(1.2);
         }
-
         .desktop-logo-container { position: relative; z-index: 2; text-align: center; animation: fadeIn 1.2s ease-out; }
         .desktop-logo { width: 320px; filter: brightness(0) invert(1); drop-shadow: 0 4px 10px rgba(0,0,0,0.3); }
 
-        /* Mobile Hub (Direita) */
+        /* Mobile Hub */
         .mobile-hub {
-            width: 100%;
-            max-width: 450px;
-            background-color: var(--brand-bg);
-            min-height: 100vh;
-            position: relative;
-            box-shadow: 0 0 50px rgba(0,0,0,0.15);
-            padding-bottom: 90px;
+            width: 100%; max-width: 450px; background-color: var(--brand-bg);
+            min-height: 100vh; position: relative;
+            box-shadow: 0 0 50px rgba(0,0,0,0.15); padding-bottom: 90px;
         }
 
         @media (min-width: 1024px) {
@@ -126,10 +64,7 @@
             .main-wrapper { justify-content: flex-start; }
             .desktop-brand { display: flex; width: 50%; }
             .mobile-hub {
-                width: 50%;
-                max-width: none;
-                height: 100vh;
-                overflow-y: auto;
+                width: 50%; max-width: none; height: 100vh; overflow-y: auto;
                 box-shadow: -10px 0 30px rgba(0,0,0,0.2);
             }
             .mobile-hub::-webkit-scrollbar { width: 8px; }
@@ -183,12 +118,12 @@
         .btn-icon { font-size: 1.6rem; }
         
         footer { text-align: center; opacity: 0.6; font-size: 0.75rem; padding-bottom: 30px; }
-
+        
+        /* Botão Flutuante */
         .floating-btn { position: fixed; bottom: 25px; right: 25px; padding: 14px 24px; background-color: var(--brand-wine); color: white; border-radius: 50px; display: flex; align-items: center; gap: 12px; box-shadow: 0 5px 20px rgba(120, 28, 38, 0.4); z-index: 9999; text-decoration: none; animation: pulse-shadow 2s infinite; transition: transform 0.2s; }
         .floating-btn:hover { transform: scale(1.05); }
         .floating-btn span { font-size: 0.95rem; font-weight: 700; white-space: nowrap; letter-spacing: 0.3px; }
         .floating-btn i { font-size: 1.4rem; }
-
         @keyframes pulse-shadow { 0% { box-shadow: 0 0 0 0 rgba(120, 28, 38, 0.5); } 70% { box-shadow: 0 0 0 15px rgba(120, 28, 38, 0); } 100% { box-shadow: 0 0 0 0 rgba(120, 28, 38, 0); } }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
@@ -213,7 +148,7 @@
             </header>
 
             <div class="hero-wrapper">
-                <img src="rayssa2.jpg" alt="Dra Rayssa Muniz no Consultório" class="hero-img">
+                <img src="rayssa2.jpg" alt="Dra Rayssa Muniz" class="hero-img">
             </div>
 
             <section class="section">
@@ -253,7 +188,7 @@
             </section>
 
             <div class="actions-wrapper">
-                <a href="https://goo.gl/maps/seulinkreal" target="_blank" rel="noopener noreferrer" class="btn-main btn-outline">
+                <a href="https://www.google.com/maps/search/?api=1&query=Av.+Américo+Pessato,+1043+-+Uberaba+MG" target="_blank" rel="noopener noreferrer" class="btn-main btn-outline">
                     <div class="btn-info"><h3>Localização</h3><span>Av. Américo Pessato, 1043</span></div>
                     <i class="fas fa-map-marker-alt btn-icon"></i>
                 </a>
